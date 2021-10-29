@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+    ;
+    <title>USD Exchange Rate Calculator</title>
+  </head>
+
+  <body>
+    <div class="gear_parent">
+      <div class="gear">
+        <div class="center"></div>
+        <div class="tooth"></div>
+        <div class="tooth"></div>
+        <div class="tooth"></div>
+        <div class="tooth"></div>
+        <div class="tooth"></div>
+      </div>
+    </div>
+
+    <h1>USD Exchange Rate Calculator</h1>
+    <p>Choose the currency and the amounts to get the exchange rate</p>
+
+    <div class="main-container">
+      <div class="amount-container">
+        <input
+          class="amount"
+          placeholder="Enter an amount in USD..."
+          type="text"
+          id="amount"
+          name="amount"
+        />
+      </div>
+
+      <div class="currency-container">
+        <select class="currency-one" id="currency-one">
+          <option value="Select a currency..." disabled selected>
+            Select a currency...
+          </option>
+          <script>
+            addCurrencies();
+          </script>
+        </select>
+      </div>
+    </div>
+
+    <!-- <div class="converted-container">
+      <input type="text" id="converted" name="converted" readonly="readonly" />
+    </div> -->
+
+    <div class="submit-container">
+      <input
+        class="submit"
+        type="submit"
+        id="submit"
+        value="Submit"
+        onClick="convertCurrency()"
+      />
+    </div>
+  </body>
+</html>

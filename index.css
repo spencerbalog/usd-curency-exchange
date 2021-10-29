@@ -1,0 +1,138 @@
+.gear_parent {
+  display: flex;
+  height: 300px;
+}
+
+.gear {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background: #05a0a5;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.gear .center {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.gears img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+}
+
+.tooth {
+  position: absolute;
+  top: -25px;
+  left: 75px;
+  z-index: 1;
+  width: 45px;
+  height: 250px;
+  background: #05a0a5;
+}
+
+.tooth:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.tooth:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.tooth:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: #05a0a5;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+}
+
+/* Left side */
+.amount-container {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: right;
+}
+
+.amount {
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.amount-text {
+  display: flex;
+}
+
+.currency-one {
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+/* Right side */
+.currency-container {
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-start;
+  margin: auto;
+  margin-left: 1em;
+}
+
+/* Middle */
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.submit {
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #05a0a5;
+  border-radius: 10px;
+}
